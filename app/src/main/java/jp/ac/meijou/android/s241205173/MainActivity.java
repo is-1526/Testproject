@@ -36,10 +36,23 @@ public class MainActivity extends AppCompatActivity {
         });
 
     prefDataStore = PrefDataStore.getInstance(this);
+    prefDataStore.getString("name").ifPresent(name -> binding.text.setText(name));
     binding.saveButton.setOnClickListener(view -> {
-        var text2 = binding.editTextText.getText().toString();
-        prefDataStore.setString("name", text2);
-       });
+            var text1 = binding.editTextText.getText().toString();
+            prefDataStore.setString("name",text1);
+        });
+    }
 
+
+
+
+
+
+
+    protected void onStart() {
+        super.onStart();
+
+        prefDataStore.getString("name")
+                .ifPresent(name -> binding.text.setText(name));
     }
 }
