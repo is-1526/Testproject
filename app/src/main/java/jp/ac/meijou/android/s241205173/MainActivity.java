@@ -31,15 +31,15 @@ public class MainActivity extends AppCompatActivity {
         });
         TextView text = findViewById(R.id.text);
         binding.button.setOnClickListener(view -> {
-            var textaf = binding.editTextText.getText().toString();
-            binding.text.setText(textaf);
+            var text1 = binding.editTextText.getText().toString();
+            binding.text.setText(text1);
         });
 
     prefDataStore = PrefDataStore.getInstance(this);
     prefDataStore.getString("name").ifPresent(name -> binding.text.setText(name));
     binding.saveButton.setOnClickListener(view -> {
-            var text1 = binding.editTextText.getText().toString();
-            prefDataStore.setString("name",text1);
+            var text2 = binding.editTextText.getText().toString();
+            prefDataStore.setString("name",text2);
         });
     }
 
