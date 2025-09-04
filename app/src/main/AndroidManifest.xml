@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TestProject">
         <activity
-            android:name=".MainActivity6"
+            android:name=".MainActivity7"
             android:exported="True">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
@@ -24,10 +24,13 @@
         </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity5"
+            android:name=".MainActivity6"
             android:exported="True">
 
         </activity>
+        <activity
+            android:name=".MainActivity5"
+            android:exported="True"></activity>
         <activity
             android:name=".MainActivity4"
             android:exported="false" />
@@ -36,7 +39,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity2"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />
